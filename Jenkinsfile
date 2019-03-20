@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Greenlight Example') {
 		    steps {
-				withCredentials([usernamePassword(credentialsId: '902d2462-e536-4927-9398-d2ab0dae85a1', passwordVariable: 'vkey', usernameVariable: 'vid')]) {
+				withCredentials([usernamePassword(credentialsId: '299780e5-d31c-4d5a-9073-237e1e635c60', passwordVariable: 'vkey', usernameVariable: 'vid')]) {
 
 					powershell '''
 						$dir = (Get-Item -Path ".\\").FullName
