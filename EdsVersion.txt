@@ -1,0 +1,19 @@
+Version 00.00.0001
+
+Notes:
+
+It seems like the Veracode Static Scan, using Veracode's Plugin, is trying 
+to find gradlew in your current directory rather than in the directories 
+listed in my PATH environment variable.
+
+I was able to get it to do a Static Scan by adding ./ to the beginning of
+the gradlew command:
+
+    ./gradlew clean build -x test 
+
+To run the Veracode Static Scan, I ran the following temporary command:
+
+    export PATH=$PATH:/Users/EGannaway/Documents/eddemo0007-veracode-demos0002/GL_TEST 
+
+Once the above command ran I could run the Veracode Static Scan using 
+the Veracode Visual Code Plugin.
